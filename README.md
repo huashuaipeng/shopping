@@ -1,6 +1,6 @@
-# quguanggou
+# 购物shopping
 
-> A Vue.js project
+> 这是一个运用vue2,vue-router2,vue-resource,mint-ui（饿了么）编写的购物单页应用，现在未与服务器进行连接阶段，全是本地数据。
 
 ## Build Setup
 
