@@ -1,0 +1,628 @@
+/* 清除内外边距 */
+
+
+/**重置默认样式*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+fieldset,
+lengend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td,
+div {
+	/* table elements 表格元素 */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+/* 设置默认字体 */
+
+body,
+html {
+	font-family: "微软雅黑", Helvetica, "Droid Sans", Arial, sans-serif;
+	/* 用 ascii 字符表示，使得在任何编码下都无问题 */
+	max-width: 640px;
+	margin: 0 auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+span {
+	display: inline-block;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+	font-style: normal;
+}
+
+
+/* 重置列表元素 */
+
+ul,
+ol {
+	list-style: none;
+}
+
+
+/* 重置文本格式元素 */
+
+a {
+	text-decoration: none;
+	text-underline: none;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+
+/* 重置表单元素 */
+
+legend {
+	color: #000;
+}
+
+
+/* for ie6 */
+
+fieldset,
+img {
+	border: none;
+}
+
+
+/* img 搭车：让链接里的 img 无边框 */
+
+
+/* 注：optgroup 无法扶正 */
+
+button,
+input,
+select,
+textarea {
+	outline: none;
+	appearance: none;
+	border: 0;
+	/* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+
+/* 重置表格元素 */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* 重置 hr */
+
+hr {
+	border: none;
+	height: 1px;
+}
+
+
+/**滚动条*/
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+
+html {
+	overflow-y: scroll;
+}
+
+
+/***路由过渡动画***/
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity .1s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
+}
+
+
+/**全局*/
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: "";
+	width: 100%;
+	height: 0;
+}
+
+.textellipsisone {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.textellipsis {
+	display: -webkit-box;
+	必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。 -webkit-box-orient 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。 text-overflow: ellipsis;
+	，可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本 。 overflow: hidden;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.p-container {
+	height: 11.36rem;
+	overflow: scroll;
+}
+
+.p-flex {
+	display: flex;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: box;
+}
+
+.p-flex-1 {
+	flex: 1;
+	-webkit-flex: 1;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+}
+
+.p-flex-float {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	-webkit-display: flex;
+	-webkit-flex-wrap: wrap;
+	-webkit-align-content: flex-start;
+}
+
+.p-align-justy {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center
+}
+
+
+/*底部fixed-btn 商品详情，购物车*/
+
+.p-bottom-btns {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 3;
+	font-size: .28rem;
+	line-height: .98rem;
+	border-top: 1px solid #F5F5F5;
+	background-color: #fff;
+}
+
+.p-btn-width {
+	width: 6.4rem;
+	margin: 0 auto;
+}
+
+
+/*加减按钮*/
+
+.p-btnjian,
+.p-btnjia {
+	background: #fff;
+	font-size: .4rem;
+	border: 1px solid #AAA9A9;
+	border-radius: 50%;
+	width: .5rem;
+	height: .5rem;
+	line-height: .5rem;
+	color: #AAA9A9;
+}
+
+.p-input {
+	width: .6rem;
+	margin: 0 10px;
+	text-align: center;
+}
+
+.p-check {
+	-webkit-appearance: none;
+	appearance: none;
+	background: none;
+	user-select: none;
+	outline: none;
+	position: relative;
+	color: #8FC241;
+	font-size: .35rem;
+}
+
+.p-check:checked {
+	-webkit-appearance: none;
+	appearance: none;
+	user-select: none;
+	outline: none;
+	background: none;
+}
+
+.p-check:checked:before {
+	font-family: "iconfont" !important;
+	content: "\e636";
+}
+
+.p-check:before {
+	font-family: "iconfont" !important;
+	content: "\e685";
+}
+
+.p-border-b {
+	border-bottom: 1px solid #DFDFDF;
+}
+
+.p-border-t {
+	border-top: 1px solid #DFDFDF;
+}
+
+.p-text-c {
+	text-align: center;
+}
+
+.p-full-btn {
+	width: 100%;
+	height: .7rem;
+	color: #fff;
+	margin: .1rem 0;
+	font-size: .24rem;
+	background: #8FC241;
+	border-radius: .1rem;
+	-webkit-border-radius: .1rem;
+}
+
+.p-full-btn:active {
+	opacity: .8;
+}
+
+.p-size {
+	font-size: .24rem;
+}
+
+img[lazy=loaded] {
+	opacity: 1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+img[lazy=loading] {
+	opacity: 0;
+	transform: scale(.99);
+	-webkit-transform: scale(.99);
+	background: #F5F5F5;
+}
+
+.p-imgloay {
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+
+/**定义订单管理下高度实现无限加载使用*/
+
+.p-order-con {
+	height: 9.86rem;
+	background-color: #F5F5F5;
+	overflow-y: scroll;
+}
+
+img {
+	width: 100%;
+}
+
+
+/*购物车商品展示被公用 购物车，创建订单**/
+
+.carlist {
+	background-color: #fff;
+}
+
+.carlist-item {
+	position: relative;
+	padding: .14rem .2rem;
+	font-size: .22rem;
+	background-color: #F5F5F5;
+	margin-bottom: .1rem;
+}
+
+.carlist-img {
+	width: 1.4rem;
+	height: 1.4rem;
+	overflow: hidden;
+	border: 1px solid #DFDFDF;
+	margin-right: .12rem;
+}
+
+.carlist-name {
+	line-height: .38rem;
+}
+
+.carlist-canshu {
+	font-size: .19rem;
+	color: #8e8e8e;
+	margin: .12rem 0;
+}
+
+.carlist-item-btn {
+	margin-top: .06rem;
+	padding-left: .4rem;
+}
+
+.carlist-price {
+	font-size: .2rem
+}
+
+
+/**搜索页导航菜单 公用   搜索，订单管理**/
+
+.search-swiper-active {
+	border-bottom: 2px solid #8FC241;
+}
+
+.search-swiper-active:before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	margin-left: -4px;
+	bottom: 0;
+	border: 4px solid transparent;
+	border-bottom-color: #8FC241;
+}
+
+
+/*****公共头部样式******/
+
+.header {
+	height: .78rem;
+	background-color: #8fc241;
+	font-size: .34rem;
+	color: #fff;
+	overflow: hidden;
+}
+
+.nav-left {
+	position: relative;
+	height: .78rem;
+	line-height: .78rem;
+	margin-left: .2rem;
+	z-index: 2;
+}
+
+.nav-right {
+	min-width: .36rem;
+	line-height: .78rem;
+	transform: translate(5.8rem, -1.56rem);
+	-webkit-transform: translate(5.8rem, -1.56rem);
+}
+
+.nav-text {
+	font-size: .28rem;
+	transform: translate(5rem, -1.56rem);
+	-webkit-transform: translate(5rem, -1.56rem);
+}
+
+.header-title {
+	transform: translateY(-.78rem);
+	-webkit-transform: translateY(-.78rem);
+	font-size: inherit;
+	text-align: center;
+	padding: 0 .6rem;
+	line-height: .78rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.header-input {
+	line-height: .58rem;
+	height: .58rem;
+	background: #fff;
+	border-radius: .1rem;
+	-webkit-border-radius: .1rem;
+	margin: .1rem .25rem;
+	text-align: center;
+}
+
+.header-shousuo {
+	color: #8FC241;
+	z-index: 2;
+}
+
+.nav-address {
+	font-size: .28rem;
+	transform: translate(5.6rem, -1.56rem);
+	-webkit-transform: translate(5.6rem, -1.56rem);
+}
+
+
+/***字体样式***/
+
+@font-face {
+	font-family: "iconfont";
+	src: url('iconfont.eot?t=1479458135823');
+	/* IE9*/
+	src: url('iconfont.eot?t=1479458135823#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('iconfont.woff?t=1479458135823') format('woff'), /* chrome, firefox */
+	url('iconfont.ttf?t=1479458135823') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('iconfont.svg?t=1479458135823#iconfont') format('svg');
+	/* iOS 4.1- */
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: .35rem;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-shouji:before { content: "\e625"; }
+
+.icon-search:before { content: "\e67c"; }
+
+.icon-xiugai:before { content: "\e630"; }
+
+.icon-icon:before { content: "\e602"; }
+
+.icon-gouwuche:before { content: "\e639"; }
+
+.icon-xuanzhong:before { content: "\e636"; }
+
+.icon-houtui:before { content: "\e654"; }
+
+.icon-jinlingyingcaiwangtubiao07:before { content: "\e790"; }
+
+.icon-icon07:before { content: "\e607"; }
+
+.icon-xiaoxi:before { content: "\e61f"; }
+
+.icon-dingwei:before { content: "\e64d"; }
+
+.icon-circle19:before { content: "\e608"; }
+
+.icon-15:before { content: "\e611"; }
+
+.icon-xiazai:before { content: "\e890"; }
+
+.icon-erji:before { content: "\e60a"; }
+
+.icon-icon1:before { content: "\e603"; }
+
+.icon-weixuanzhong:before { content: "\e685"; }
+
+.icon-fenlei:before { content: "\e631"; }
+
+.icon-m-per-person:before { content: "\e68d"; }
+
+.icon-qiaquan:before { content: "\e606"; }
+
+.icon-chexiao-copy:before { content: "\e609"; }
+
+.icon-sousuo:before { content: "\e600"; }
+
+.icon-shouye:before { content: "\e604"; }
+
+.icon-laji:before { content: "\e650"; }
+
+.icon-membershipcard:before { content: "\e605"; }
+
+.icon-dvt-home:before { content: "\e64c"; }
+
+
+
+
+/*..............个人写的样式.......................*/
+
+
+/*相对定位 绝对定位 固定定位*/
+
+.p-rel {
+	position: relative;
+}
+
+.p-abs {
+	position: absolute;
+}
+
+.p-fix {
+	position: fixed;
+}
+
+
+/*input边框圆角*/
+
+.p-border {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+/*个别input边框去除border outline样式*/
+
+.p-line {
+	outline: none;
+	border: none;
+}
+
+.p-spacing {
+	color: #3c3c3c;
+	margin: 1.32rem .52rem 0;
+	text-align: center;
+}
+
+.p-mob-mem-btn {
+	width: 5.36rem;
+	height: .8rem;
+	color: #ffffff;
+	background: #8fc241;
+	font-size: .26rem;
+	border: 1px solid #dfdfdf;
+}
+
+.p-ads-btn {
+	width: 6rem;
+	height: .8rem;
+	color: #ffffff;
+	background: #8fc241;
+	font-size: .26rem;
+	border: 1px solid #dfdfdf;
+}
