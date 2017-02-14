@@ -7,7 +7,7 @@ import router from './router.js'
 import AwesomeSwiper from 'vue-awesome-swiper'
 import {InfiniteScroll,Lazyload} from 'mint-ui'
 
-import Pageload from './components/pageload.vue'
+import Pageload from './components/pageLoad.vue'
 import './assets/app.css'
 
 //引入插件
